@@ -1,0 +1,30 @@
+.direction div{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    margin: 2em;
+}
+.direction >div:last-child{
+    background: red;
+}
+.direction{
+    display: flex;
+}
+/* responsive en design */
+@media screen and (max-width:768px){
+    .direction{
+        flex-direction: column;
+    }
+    h2{
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:996px) {
+    .direction{
+        flex-direction: column-reverse;
+    }
+    .direction >div:last-child{
+        background-color: yellow;
+    }
+}
